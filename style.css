@@ -1,0 +1,102 @@
+body{
+    margin: 0;
+}
+.parent{
+    gap: 5px;
+background: white;
+display: grid;
+grid-template-areas:
+"i1 i1 i1"
+"i2 i2 i2"
+"i3 i3 i4"
+"i3 i3 i5"
+"i6 i9 i9"
+"i7 i9 i9"
+"i8 i9 i9"
+"i10 i10 i10"
+;
+}
+.parent > div{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.item-1{
+    line-height: 5vh;
+    grid-area: i1;
+background: blue;
+margin-bottom: 1rem;
+
+
+}
+
+.item-2{
+  
+    grid-area: i2;
+    background: red;
+}
+.item-3{
+   background: linear-gradient(to right, red, 90%, blue);
+    grid-area: i3;
+   min-height: 20vh
+}
+.item-4{
+    background: brown;
+    grid-area: i4;
+}
+.item-5{
+    background: purple;
+    grid-area: i5;
+}
+.item-6{
+    background: skyblue;
+    grid-area: i6;
+}
+.item-7{
+ background: purple;
+    grid-area: i7; 
+}
+.item-8{
+    background: red;
+    grid-area: i8;
+}
+.item-9{
+    background:radial-gradient(red, yellow);
+    grid-area: i9;
+     min-height: 30vh;
+}
+.item-10{
+    background: black;
+    color: white;
+    grid-area: i10;
+}
+@media(max-width:992px)
+{
+    .parent{
+        grid-template-areas:
+        "i1 i1"
+        "i2 i2"
+        "i3 i3"
+        "i4 i5"
+        "i6 i6"
+        "i9 i9"
+        "i7 i8"
+        "i10 i10" ;
+    }
+    
+}
+@media(max-width:552px){
+    .parent{
+        grid-template-areas:
+        "i1"
+        "i2"
+        "i3"
+        "i4"
+        "i5"
+        "i6"
+        "i9"
+        "i7"
+        "i8"
+        "i10" ;
+    }
+}
